@@ -52,7 +52,6 @@ user_session_id = st.sidebar.text_input(label="Enter session name", value="defau
 if user_groq_api and user_model:
     llm = ChatGroq(model=user_model, groq_api_key=user_groq_api)
 
-    # session_stste is a place provided by streamlit where we store our variables for runtime 
     # lets create our chat store which will have session_id:ChatHistory
 
     if "store" not in st.session_state:
@@ -155,10 +154,7 @@ if user_groq_api and user_model:
                 config={"configurable":{"session_id":user_session_id}}
             )
             st.write(response["answer"])
-            # st.write(st.session_state.store)
-            # st.write("Chat History:", session_history.messages)
-        
-                    
+          
 
 else:
     st.write("Please enter API & model name")
