@@ -1,7 +1,7 @@
 ### A RAG Q&A application
 ### Powered by: Groq
 
-This application basically take the content from the user and then answers the question based on content
+This application basically take the content (PDF) from the user and then answers the question based on content
 
 #### Setup:
 
